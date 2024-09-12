@@ -11,6 +11,7 @@ function createAulas() {
     });
   }
 }
+
 createAulas();
 
 router.get('/', (req, res) => {
@@ -41,4 +42,5 @@ router.post('/', (req, res) => {
     Nueva_Aula: newAula,
   });
 });
+
 module.exports = router;
