@@ -6,17 +6,29 @@ const { carreras } = require('../lib/capro');
 
 const alumnos = [];
 
+function traducirGenero(genero) {
+  switch (genero) {
+    case 'female':
+      return 'femenino';
+    case 'male':
+      return 'masculino';
+    default:
+      return 'género no especificado';
+  }
+}
+
 function crearAlumno() {
   for (let index = 0; index < 20; index++) {
     const [materiasAleatorias, clave] = seleccionarMateriasAleatorias(materias);
-    let genre = Math.random() < 0.5 ? 'female' : 'male';
+    let genero = Math.random() < 0.5 ? 'female' : 'male';
+    let generoTraducido = traducirGenero(genero);
 
     alumnos.push({
       matricula: faker.number.int({ max: 10000 }),
-      student: faker.person.firstName(genre),
+      estudiante: faker.person.firstName(genero),
       carrera: carreras[Math.floor(Math.random() * 5)], // 3.46
-      age: Math.floor(Math.random() * 10) + 18,
-      genre: genre,
+      edad: Math.floor(Math.random() * 10) + 18,
+      genero: generoTraducido,
       materia_1: materiasAleatorias[0] + ' - clave: ' + clave[0],
       materia_2: materiasAleatorias[1] + ' - clave: ' + clave[1],
       materia_3: materiasAleatorias[2] + ' - clave: ' + clave[2],
