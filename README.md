@@ -12,3 +12,7 @@
 - Crea los archivos `.editorconfig`, `.eslintrc.json`, `.gitignore`
 
 ### Crea las carpetas de enrutamiento necesarias
+
+### Actualizar proyecto 
+- Abre en la terminal el proyecto
+- Ejecuta `git pull`
