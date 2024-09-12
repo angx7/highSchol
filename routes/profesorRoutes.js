@@ -51,7 +51,7 @@ router.post('/', (req, res) => {
       message: 'El ID de profesor que intentas registrar ya existe',
     });
   }
-  materias.push(nuevoProfesor);
+  profesor.push(nuevoProfesor);
   res.json({
     message: 'El profesor ha sido registrado',
     nuevoProfesor: nuevoProfesor,
