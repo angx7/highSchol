@@ -88,22 +88,4 @@ router.post('/', (req, res) => {
   res.json({ message: 'El alumno ha sido agregado', nuevoAlumno: nuevoAlumno });
 });
 
-/*
-// Update a student by license plate
-router.patch('/:matricula', (req, res) => {
-  const { matricula } = req.params;
-  const { student, carrera, age, genre } = req.body;
-  const studentToUpdate = alumnos.find(
-    (alumnos) => alumnos.matricula === parseInt(matricula)
-  );
-  if (!studentToUpdate) {
-    return res.status(400).json({ message: 'Student not found' });
-  }
-  studentToUpdate.student = student;
-  studentToUpdate.carrera = carrera;
-  studentToUpdate.age = age;
-  studentToUpdate.genre = genre;
-  res.json(studentToUpdate);
-});*/
-
 module.exports = router;

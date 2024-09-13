@@ -17,7 +17,7 @@ createAulas();
 router.get('/', (req, res) => {
   const { aula } = req.query;
   if (aula) {
-    const aulaInfo = aulas.find((aulas) => aulas.NumAula === parseInt(aula));
+    const aulaInfo = aulas.find((aulas) => aulas.aula === parseInt(aula));
     if (!aulaInfo) {
       return res
         .status(400)
